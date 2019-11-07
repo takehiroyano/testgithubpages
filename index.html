@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+
 <html>
 <head>
 <meta charset="UTF-8" />
@@ -15,10 +15,10 @@
 </nav>
 <div class="container" style="padding-top: 70px;padding-bottom: 70px;">
 <header class="header">
-<h2>COUNT DOWN・CAOFF 2018-2019投票ページ</h2>
+<h2>COUNT DOWN・CAOFF 2019-2020投票ページ</h2>
 
-今年も<a href="http://www.caoff.com/" target="_blank">COUNTDOWN CAOFF</a>が12月31日に開催されます。<br/>
-そこで、2018年発表されたアニソンで良かったと思う曲ベスト10を決めたいと思います！<br/>
+今年も<a href="http://kjganime.com/" target="_blank">COUNTDOWN CAOFF</a>が12月31日に開催されます。<br/>
+そこで、2019年発表されたアニソンで良かったと思う曲ベスト10を決めたいと思います!!<br/>
 ランキングは皆さんの投票で決定します。<br/>
 下のリストから３曲選んで、tweetボタンをクリックしてください。<br/>
 リストになかったら、tweetボタンを押した後、編集してtweetしてくださいね。
@@ -34,7 +34,7 @@
 
 <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
 <div class="container">
-<a href="https://twitter.com/intent/tweet?button_hashtag=caoff2017&text=" class="twitter-hashtag-button btn btn-primary btn-lg btn-block" role="button" data-lang="ja" data-role="button">Tweet #caoff2017</a><br/>
+<a href="https://twitter.com/intent/tweet?button_hashtag=caoff2020&text=" class="twitter-hashtag-button btn btn-primary btn-lg btn-block" role="button" data-lang="ja" data-role="button">Tweet #caoff2020</a><br/>
 </div>
 </nav>
 <script type="text/javascript"
@@ -64,7 +64,7 @@ var loadSelection = function() {
         text += i+"位:"+selectTitles[i-1]+"\n";
     }
     text += "https://goo.gl/MTl6sH";
-    var url = "https://twitter.com/intent/tweet?button_hashtag=caoff2017&text=";
+    var url = "https://twitter.com/intent/tweet?button_hashtag=caoff2020&text=";
     $('.twitter-hashtag-button').attr("href", url+encodeURIComponent(text));
 }
 var deleteTitle = function(title) {
@@ -81,9 +81,8 @@ var upTitle = function(index) {
     selectTitles.splice(index-1,2,selectTitles[index],selectTitles[index-1]);
     loadSelection();
 }
-alert('javascript');
-gdata = { io: { handleScriptLoaded: function(json) { 
-    console.log('gdata');
+$.get("https://spreadsheets.google.com/feeds/list/13Ss_ox1Z7h0OUL_dBcmk0Z5yhrC52LZp4KDlP7JZ1xg/oty81yf/public/values?alt=json",
+ function(json) { 
     var entrys = json.feed.entry;
     var len = entrys.length;
     
@@ -110,10 +109,9 @@ gdata = { io: { handleScriptLoaded: function(json) {
           loadSelection();
       }
     });
-    
-} } };
+  } 
+);
 //-->
 </script>
-<script src="https://spreadsheets.google.com/feeds/list/13Ss_ox1Z7h0OUL_dBcmk0Z5yhrC52LZp4KDlP7JZ1xg/oty81yf/public/values?alt=json-in-script"/>
 </body>
 </html>
