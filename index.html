@@ -81,8 +81,9 @@ var upTitle = function(index) {
     selectTitles.splice(index-1,2,selectTitles[index],selectTitles[index-1]);
     loadSelection();
 }
+alert('javascript');
 gdata = { io: { handleScriptLoaded: function(json) { 
-    
+    console.log('gdata');
     var entrys = json.feed.entry;
     var len = entrys.length;
     
